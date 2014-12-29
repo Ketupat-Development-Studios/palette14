@@ -32,6 +32,7 @@
 			#rightBlock{
 				right:0;
 			}
+			.vjs-fullscreen-control { display: none; } .vjs-default-skin .vjs-volume-control { margin-right: 20px; }
 		</style>
 	</head>
 
@@ -47,11 +48,13 @@
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="js/video.js"></script>
 		<script>
+			var myPlayer; //videoJS player
+
 			videojs.options.flash.swf = "video-js.swf";
 
 			videojs("lodestar_video").ready(function(){
-				var myPlayer = this;
-				 myPlayer.play();
+				myPlayer = this;
+				myPlayer.play();
 			});
 
 			var jQueryVideo = $('#lodestar_video_html5_api'); //jQuery object
@@ -79,5 +82,15 @@
 			});
 		</script>
 		<script src="js/audioPanner.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-57000907-2', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
 	</body>
 </html>
