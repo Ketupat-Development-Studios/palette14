@@ -31,6 +31,9 @@
 			#play-pause,.progressBar{
 				display:inline-block;
 			}
+			.vjs-control-bar{
+				
+			}
 		</style>
 	</head>
 
