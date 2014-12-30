@@ -1,7 +1,7 @@
 //Init AudioContext
-window.audioContext = window.audioContext||window.webkitAudioContext; //fallback for older chrome browsers
+//window.audioContext = window.audioContext||window.webkitAudioContext; //fallback for older chrome browsers
 var context = new AudioContext();
-context.createGain = context.createGain||context.createGainNode; //fallback for gain naming
+//context.createGain = context.createGain||context.createGainNode; //fallback for gain naming
 var gainL = context.createGain();
 var gainR = context.createGain();
 
