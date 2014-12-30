@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Lumiere 2014</title>
+		<title>Palette 2014</title>
 		<link href="css/video-js.min.css" rel="stylesheet">
 		<style>
 			body{margin:0;padding:0;}
@@ -39,7 +39,7 @@
 	<body>
 		<div class="whiteDiv" id="leftBlock"></div>
 		<div id="main">
-			<video id="lodestar_video" poster="img/hitchhike.jpg" preload="auto"
+			<video id="palette_video" poster="img/hitchhike.jpg" preload="auto"
 				class="video-js vjs-default-skin" controls width="960px" height="540px">
 	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015.mp4" type="video/mp4">
 			</video>
@@ -53,19 +53,18 @@
 
 			videojs.options.flash.swf = "video-js.swf";
 
-			videojs("lodestar_video").ready(function(){
+			videojs("palette_video").ready(function(){
 				myPlayer = this;
 				myPlayer.play();
 			});
 
-			var jQueryVideo = $('#lodestar_video_html5_api'); //jQuery object
+			var jQueryVideo = $('#palette_video_html5_api'); //jQuery object
 			var video = jQueryVideo[0]; //DOM object
 
 			$(document).ready(function(){
 				jQueryVideo.width("1920");
 				$(".whiteDiv").css('width',($(window).width()-960)/2 + 'px');
 				panToLeft();
-				window.history.pushState("tardis", "Palette '14", "/");
 			});
 
 			function vidJump(direction){
