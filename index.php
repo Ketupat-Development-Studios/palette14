@@ -10,9 +10,6 @@
 				position:fixed;
 				margin-top:20px;
 			}
-			#lodestar_video{
-				
-			}
 			.vjs-control-bar{
 				position:relative;
 				top:100%;
