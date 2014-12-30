@@ -51,7 +51,7 @@ BiquadFilterNode.type and OscillatorNode.type.
   'use strict';
 
   function fixSetTarget(param) {
-    if (!param)	// if NYI, just return
+    if (!param) // if NYI, just return
       return;
     if (!param.setTargetAtTime)
       param.setTargetAtTime = param.setTargetValueAtTime; 
@@ -179,4 +179,3 @@ BiquadFilterNode.type and OscillatorNode.type.
   }
   
 }(window));
-

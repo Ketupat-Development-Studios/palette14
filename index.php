@@ -45,6 +45,7 @@
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="js/AudioContextMonkeyPatch.js"></script>
 		<script src="js/video.js"></script>
+		<script src="js/browserCheck.js"></script>
 		<script>
 			var myPlayer; //videoJS player
 
