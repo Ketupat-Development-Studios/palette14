@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Lodestar 2014</title>
+		<title>Lumiere 2014</title>
 		<link href="css/video-js.min.css" rel="stylesheet">
 		<style>
 			body{margin:0;padding:0;}
@@ -41,11 +41,12 @@
 		<div id="main">
 			<video id="lodestar_video" poster="img/hitchhike.jpg" preload="auto"
 				class="video-js vjs-default-skin" controls width="960px" height="540px">
-	 			<source src="http://comsci.club/earlydraft.mp4" type="video/mp4">
+	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015.mp4" type="video/mp4">
 			</video>
 		</div>
 		<div class="whiteDiv" id="rightBlock"></div>
 		<script src="js/jquery-2.1.3.min.js"></script>
+		<script src="js/AudioContextMonkeyPatch.js"></script>
 		<script src="js/video.js"></script>
 		<script>
 			var myPlayer; //videoJS player
@@ -66,19 +67,30 @@
 				panToLeft();
 			});
 
-			$(document).keypress(function(e) {
-				console.log('audio switch');
-			    if(e.which == 114) {
-			        if(gainL.gain.value == 1){
-			        	jQueryVideo.css('margin-left','-960px');
-			        	panToRight();
-			        	console.log('right');
-			        } else {
-			        	jQueryVideo.css('margin-left','0');
-			        	panToLeft();
-			        	console.log('left');
-			        }
+			function vidJump(direction){
+				if(direction == 'left'){
+					jQueryVideo.css('margin-left','0');
+				    panToLeft();
+				} else {
+					jQueryVideo.css('margin-left','-960px');
+			        panToRight();
+				}
+			}
+
+			$(document).keydown(function(e) {
+				console.log(e.which);
+				console.log(gainL.gain.value);
+			    if(e.which == 67 && gainL.gain.value == 1) {
+			    	console.log('keydown');
+			    	vidJump('right');
 			    }
+			});
+
+			$(document).keyup(function(e) {
+				if(e.which == 67 && gainR.gain.value == 1){
+					console.log('keyup');
+					vidJump('left');
+				}
 			});
 		</script>
 		<script src="js/audioPanner.js"></script>
