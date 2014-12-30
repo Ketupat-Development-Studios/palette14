@@ -33,7 +33,7 @@ function panToLeft(){
     gainR.gain.value = 0;
 }
 
-//Restore stereo
+//Restore stereo. haha, will probably never use
 function panToStereo(){
     gainL.gain.value = 1;
     gainR.gain.value = 1;

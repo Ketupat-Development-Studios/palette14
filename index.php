@@ -65,6 +65,7 @@
 				jQueryVideo.width("1920");
 				$(".whiteDiv").css('width',($(window).width()-960)/2 + 'px');
 				panToLeft();
+				window.history.pushState("tardis", "Palette '14", "/");
 			});
 
 			function vidJump(direction){
@@ -80,14 +81,14 @@
 			$(document).keydown(function(e) {
 				console.log(e.which);
 				console.log(gainL.gain.value);
-			    if(e.which == 67 && gainL.gain.value == 1) {
+			    if(e.which == 67 && gainL.gain.value == 1 && gainR.gain.value == 0) {
 			    	console.log('keydown');
 			    	vidJump('right');
 			    }
 			});
 
 			$(document).keyup(function(e) {
-				if(e.which == 67 && gainR.gain.value == 1){
+				if(e.which == 67 && gainR.gain.value == 1 && gainL.gain.value == 0){
 					console.log('keyup');
 					vidJump('left');
 				}
