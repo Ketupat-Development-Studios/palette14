@@ -1,4 +1,2 @@
-#RJ Orientation 2014
-##Lumiere
-
-
+#RJ Open House 2014
+##*Palette*
