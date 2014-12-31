@@ -1,27 +1,43 @@
 <html>
 	<head>
-		<title>Palette 2014</title>
+		<title>Raffles Palette</title>
+		<!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
+		<link rel="icon" href="img/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" href="img/favicon.ico">
+
 		<link href="css/video-js.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+
 		<style>
-			body{margin:0;padding:0;}
+			body{
+				margin:0;
+				padding:0 0 20px 0;
+				background-color:#336600;
+				overflow-x:hidden;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.top *{
+				position:absolute;
+				z-index:7;
+			}
 			#main{
 				width:100%;
-				height:100%;
-				position:fixed;
-				margin-top:20px;
+				position:absolute;
 			}
 			.vjs-control-bar{
 				position:relative;
-				top:100%;
 			}
 			div.video-js{
 				margin:auto;
+				z-index:5;
 			}
-			.whiteDiv{
+			#leftBlock,#rightBlock{
 				height:100%;
 				position:fixed;
-				background-color:#fff;
-				z-index:1000;
+				background-color:#336600;
+				z-index:6;
+				top:0;
 			}
 			#leftBlock{
 				left:0;
@@ -30,23 +46,74 @@
 				right:0;
 			}
 			.vjs-fullscreen-control { display: none; } .vjs-default-skin .vjs-volume-control { margin-right: 20px; }
+
+			#banner{
+				left:0;
+				width:40%;
+			}
+			#logo{
+				right:0;
+				width:8%;
+				margin:15px 15px 0 0;
+			}
+			.clear{
+				clear:both;
+			}
+			.bottom{
+				width:640px;
+				margin:380px auto auto auto;
+			}
+			.share{
+				display:inline-block;
+				font-size:2em;
+				color:#fff;
+				margin:0 0 0 20px;
+				cursor:pointer;
+				text-align:center;
+			}
+			h2{
+				color:#fff;
+				font-weight:300;
+				margin:0 0 20px 0;
+			}
 		</style>
 	</head>
 
 	<body>
-		<div class="whiteDiv" id="leftBlock"></div>
-		<div id="main">
-			<video id="palette_video" poster="img/hitchhike.jpg" preload="auto"
-				class="video-js vjs-default-skin" controls width="960px" height="540px">
-	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015.mp4" type="video/mp4">
-			</video>
+		<div class="top">
+			<img src="img/banner.png" id="banner">
+			<img src="img/logo.png" id="logo">
+			<div class="clear"></div>
 		</div>
-		<div class="whiteDiv" id="rightBlock"></div>
+		
+		<div id="main">
+			<div id="leftBlock"></div>
+			<video id="palette_video" poster="img/thumbnail.png" preload="auto"
+				class="video-js vjs-default-skin" controls data-setup="{}" width="640" height="360">
+	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015 (Version 2).mp4" type="video/mp4">
+			</video>
+			<div id="rightBlock"></div>
+		</div>
+
+		<div class="bottom">
+			<h2>Share Your Experience</h1>
+			<div class="share" id="fb">
+				<i class="fa fa-facebook"></i>
+			</div>
+			<div class="share" id="twitter">
+				<i class="fa fa-twitter"></i>
+			</div>
+		</div>
+
 		<script src="js/jquery-2.1.3.min.js"></script>
 		<script src="js/AudioContextMonkeyPatch.js"></script>
 		<script src="js/video.js"></script>
 		<script src="js/browserCheck.js"></script>
 		<script>
+			var vidHeight = 360;
+			var vidWidth = 640;
+
+
 			var myPlayer; //videoJS player
 
 			videojs.options.flash.swf = "video-js.swf";
@@ -60,9 +127,15 @@
 			var video = jQueryVideo[0]; //DOM object
 
 			$(document).ready(function(){
-				jQueryVideo.width("1920");
-				$(".whiteDiv").css('width',($(window).width()-960)/2 + 'px');
+				jQueryVideo.width(vidWidth*2);
+				$("#leftBlock,#rightBlock").css('width',($(window).width()-vidWidth)/2 + 'px');
 				panToLeft();
+
+				$(".top").height($("#banner").height());
+			});
+
+			$(window).resize(function(){
+				location.reload();
 			});
 
 			function vidJump(direction){
@@ -70,7 +143,7 @@
 					jQueryVideo.css('margin-left','0');
 				    panToLeft();
 				} else {
-					jQueryVideo.css('margin-left','-960px');
+					jQueryVideo.css('margin-left','-'+vidWidth+'px');
 			        panToRight();
 				}
 			}
@@ -89,6 +162,14 @@
 					console.log('keyup');
 					vidJump('left');
 				}
+			});
+
+			$("#fb").click(function(){
+				window.location.href = "https://www.facebook.com/sharer/sharer.php?u=http://rafflespalette.com";
+			});
+
+			$("#twitter").click(function(){
+				window.location.href = "http://twitter.com/share?text=Experience the Raffles Palette&url=http://rafflespalette.com&hashtags=rafflespalette";
 			});
 		</script>
 		<script src="js/audioPanner.js"></script>
