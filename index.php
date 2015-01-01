@@ -18,4 +18,6 @@
 		header('Location: video.php');
 
 	}
+
+	die();
 ?>
