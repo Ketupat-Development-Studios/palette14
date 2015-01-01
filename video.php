@@ -14,7 +14,7 @@
 				max-width: 100%;
 				margin:0;
 				padding:0 0 20px 0;
-				background-color:#336600;
+				background-color:#009900;
 				overflow-x:hidden;
 				font-family: 'Open Sans', sans-serif;
 			}
