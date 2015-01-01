@@ -64,8 +64,8 @@
 			}
 			.bottom{
 				position:absolute;
-				width:640px;
-				margin:320px auto 20px auto;
+				width:800px;
+				margin:450px auto 20px auto;
 				z-index:6;
 			}
 			.share{
@@ -104,8 +104,8 @@
 		
 		<div id="main">
 			<video id="palette_video" poster="img/thumbnail.png" preload="auto"
-				class="video-js vjs-default-skin" controls data-setup="{}" width="640" height="360">
-	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015 (Version 2).mp4" type="video/mp4">
+				class="video-js vjs-default-skin" controls data-setup="{}" width="800" height="450">
+	 			<source src="vid/openhouse.mp4" type="video/mp4">
 			</video>
 		</div>
 
@@ -119,7 +119,7 @@
 			</div>
 
 			<div class="internet-explorer-worthy">
-				<img src="img/daleksHaveNoConceptOfElegance.png" width="25%">
+				<img src="img/daleksHaveNoConceptOfElegance.png" width="15%">
 				<p class="nospaceforpotatoes">&#169; NOVA STUDIOS 2015</p>
 			</div>
 		</div>
@@ -129,8 +129,8 @@
 		<script src="js/video.js"></script>
 		<script src="js/browserCheck.js"></script>
 		<script>
-			var vidHeight = 360;
-			var vidWidth = 640;
+			var vidHeight = 450;
+			var vidWidth = 800;
 
 
 			var myPlayer; //videoJS player
@@ -199,7 +199,7 @@
 			});
 
 			$(".internet-explorer-worthy>img").click(function(){
-				var feelingLucky = getRandomInt(1,20);
+				var feelingLucky = getRandomInt(1,100);
 				if(feelingLucky == 7){
 					window.location.href = "http://thenextweb.com/entrepreneur/2012/04/22/before-naming-your-startup-read-this/";
 				} else if (feelingLucky == 8){
