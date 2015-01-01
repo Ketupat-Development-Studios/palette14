@@ -14,7 +14,7 @@
 				max-width: 100%;
 				margin:0;
 				padding:0 0 20px 0;
-				background-color:#009900;
+				background-color:#009966;
 				overflow-x:hidden;
 				font-family: 'Open Sans', sans-serif;
 			}
@@ -106,6 +106,7 @@
 			<video id="palette_video" poster="img/thumbnail.png" preload="auto"
 				class="video-js vjs-default-skin" controls data-setup="{}" width="800" height="450">
 	 			<source src="vid/openhouse.mp4" type="video/mp4">
+	 			<source src="vid/openhouse.webm" type="video/webm">
 			</video>
 		</div>
 
