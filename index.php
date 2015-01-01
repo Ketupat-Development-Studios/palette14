@@ -117,11 +117,6 @@
 			<div class="share" id="twitter">
 				<i class="fa fa-twitter"></i>
 			</div>
-
-			<div class="internet-explorer-worthy">
-				<img src="img/daleksHaveNoConceptOfElegance.png" width="15%">
-				<p class="nospaceforpotatoes">&#169; NOVA STUDIOS 2015</p>
-			</div>
 		</div>
 
 		<script src="js/jquery-2.1.3.min.js"></script>
@@ -195,7 +190,7 @@
 			});
 
 			$("#logo").click(function(){
-				window.location.href = "https://ri.edu.sg";
+				window.location.href = "https://www.ri.edu.sg";
 			});
 
 			$(".internet-explorer-worthy>img").click(function(){
