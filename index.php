@@ -205,7 +205,7 @@
 				} else if (feelingLucky == 8){
 					window.location.href = "http://en.wikipedia.org/wiki/Bad!_Bossa_Nova";
 				} else {
-
+					window.location.href = "http://www.novafilmstudios.com/";
 				}
 			});
 
