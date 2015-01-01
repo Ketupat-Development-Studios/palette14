@@ -18,6 +18,9 @@
 				font-family: 'Open Sans', sans-serif;
 				color:#fff;
 			}
+			h1{
+				font-size:2em;
+			}
 		</style>
 	</head>
 
