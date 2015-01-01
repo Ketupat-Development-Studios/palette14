@@ -11,6 +11,7 @@
 
 		<style>
 			body{
+				max-width: 100%;
 				margin:0;
 				padding:0 0 20px 0;
 				background-color:#336600;
@@ -24,6 +25,7 @@
 			#main{
 				width:100%;
 				position:absolute;
+				margin-top:-60px;
 			}
 			.vjs-control-bar{
 				position:relative;
@@ -49,23 +51,25 @@
 
 			#banner{
 				left:0;
-				width:40%;
+				width:50%;
 			}
 			#logo{
 				right:0;
-				width:8%;
+				width:5%;
 				margin:15px 15px 0 0;
 			}
 			.clear{
 				clear:both;
 			}
 			.bottom{
+				position:absolute;
 				width:640px;
-				margin:380px auto auto auto;
+				margin:320px auto 20px auto;
+				z-index:6;
 			}
 			.share{
 				display:inline-block;
-				font-size:2em;
+				font-size:1.8em;
 				color:#fff;
 				margin:0 0 0 20px;
 				cursor:pointer;
@@ -75,6 +79,14 @@
 				color:#fff;
 				font-weight:300;
 				margin:0 0 20px 0;
+			}
+			div.internet-explorer-worthy{
+				text-align:center;
+				margin:auto;
+			}
+			p.nospaceforpotatoes{
+				margin:10px 0 0 0;
+				color:#fff;
 			}
 		</style>
 	</head>
@@ -103,6 +115,11 @@
 			<div class="share" id="twitter">
 				<i class="fa fa-twitter"></i>
 			</div>
+
+			<div class="internet-explorer-worthy">
+				<img src="img/daleksHaveNoConceptOfElegance.png" width="25%">
+				<p class="nospaceforpotatoes">&#169; NOVA STUDIOS 2015</p>
+			</div>
 		</div>
 
 		<script src="js/jquery-2.1.3.min.js"></script>
@@ -129,6 +146,7 @@
 			$(document).ready(function(){
 				jQueryVideo.width(vidWidth*2);
 				$("#leftBlock,#rightBlock").css('width',($(window).width()-vidWidth)/2 + 'px');
+				$(".bottom").css('margin-left',($(window).width()-vidWidth + 10)/2 + 'px');
 				panToLeft();
 
 				$(".top").height($("#banner").height());
@@ -170,6 +188,31 @@
 
 			$("#twitter").click(function(){
 				window.location.href = "http://twitter.com/share?text=Experience the Raffles Palette&url=http://rafflespalette.com&hashtags=rafflespalette";
+			});
+
+			$("#banner").click(function(){
+				window.location.href = "https://www.facebook.com/rafflespalette";
+			});
+
+			$("#logo").click(function(){
+				window.location.href = "https://ri.edu.sg";
+			});
+
+			$(".internet-explorer-worthy>img").click(function(){
+				var feelingLucky = getRandomInt(1,20);
+				if(feelingLucky == 7){
+					window.location.href = "http://thenextweb.com/entrepreneur/2012/04/22/before-naming-your-startup-read-this/";
+				} else if (feelingLucky == 8){
+					window.location.href = "http://en.wikipedia.org/wiki/Bad!_Bossa_Nova";
+				}
+			});
+
+			function getRandomInt(min, max) {
+ 				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+
+			$(window).scroll(function(){
+				$(window).scrollLeft(0); /* you idiot */
 			});
 		</script>
 		<script src="js/audioPanner.js"></script>
