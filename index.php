@@ -20,7 +20,7 @@
 			}
 			.top *{
 				position:absolute;
-				z-index:7;
+				z-index:5;
 			}
 			#main{
 				width:100%;
@@ -33,6 +33,7 @@
 			div.video-js{
 				margin:auto;
 				z-index:5;
+				overflow:hidden;
 			}
 			#leftBlock,#rightBlock{
 				height:100%;
@@ -88,6 +89,9 @@
 				margin:10px 0 0 0;
 				color:#fff;
 			}
+			#palette_video_html5_api{
+				overflow:hidden;
+			}
 		</style>
 	</head>
 
@@ -99,12 +103,10 @@
 		</div>
 		
 		<div id="main">
-			<div id="leftBlock"></div>
 			<video id="palette_video" poster="img/thumbnail.png" preload="auto"
 				class="video-js vjs-default-skin" controls data-setup="{}" width="640" height="360">
 	 			<source src="http://projects.comsci.club/FabFabian/Open House 2015 (Version 2).mp4" type="video/mp4">
 			</video>
-			<div id="rightBlock"></div>
 		</div>
 
 		<div class="bottom">
@@ -145,10 +147,8 @@
 
 			$(document).ready(function(){
 				jQueryVideo.width(vidWidth*2);
-				$("#leftBlock,#rightBlock").css('width',($(window).width()-vidWidth)/2 + 'px');
 				$(".bottom").css('margin-left',($(window).width()-vidWidth + 10)/2 + 'px');
 				panToLeft();
-
 				$(".top").height($("#banner").height());
 			});
 
@@ -204,6 +204,8 @@
 					window.location.href = "http://thenextweb.com/entrepreneur/2012/04/22/before-naming-your-startup-read-this/";
 				} else if (feelingLucky == 8){
 					window.location.href = "http://en.wikipedia.org/wiki/Bad!_Bossa_Nova";
+				} else {
+
 				}
 			});
 
