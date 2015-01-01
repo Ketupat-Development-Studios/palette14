@@ -175,7 +175,6 @@
 
 			videojs("palette_video").ready(function(){
 				myPlayer = this;
-				myPlayer.play();
 			});
 
 			var jQueryVideo = $('#palette_video_html5_api'); //jQuery object
@@ -213,34 +212,13 @@
 					case 77:
 						$("#disclaimer").text("Join comsci.club!");
 						break;
-					/*
-					case 76:
-						$("#disclaimer").text("Potatoes are good for you!");
-						break;
-					
-					case 80:
-						$("#body").addClasss("pony");
-						break;
-
-					case 73:
-						$("#ill").addClass("ill");
-						break;
-					*/
 				}
 			});
 			$(document).keyup(function(e) {
 				if(e.which == 71 || e.which == 77 || e.which == 76) {
 					var disclaimer = document.getElementById("disclaimer");
 					disclaimer.innerHTML = oDisc;
-				}/*
-				if(e.which == 80) {
-					$('#body').removeClass("pony")
-					console.log("praise be to gaben");
 				}
-				if(e.which == 73) {
-					$('#body').removeClass("ill")
-					console.log("praise be to gaben");
-				}*/
 			});
 			<?php
 	 				if(!$mobile) echo "
@@ -276,21 +254,6 @@
 			$("#logo").click(function(){
 				window.location.href = "http://www.ri.edu.sg";
 			});
-
-			$(".internet-explorer-worthy>img").click(function(){
-				var feelingLucky = getRandomInt(1,100);
-				if(feelingLucky == 7){
-					window.location.href = "http://thenextweb.com/entrepreneur/2012/04/22/before-naming-your-startup-read-this/";
-				} else if (feelingLucky == 8){
-					window.location.href = "http://en.wikipedia.org/wiki/Bad!_Bossa_Nova";
-				} else {
-					window.location.href = "http://www.novafilmstudios.com/";
-				}
-			});
-
-			function getRandomInt(min, max) {
- 				return Math.floor(Math.random() * (max - min + 1)) + min;
-			}
 
 			$(window).scroll(function(){
 				$(window).scrollLeft(0); /* you idiot */
