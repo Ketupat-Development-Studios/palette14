@@ -33,14 +33,6 @@
 				overflow-x:hidden;
 				font-family: 'Open Sans', sans-serif;
 			}
-			.pony{
-				background-image: url("img/pony.png");
-    			background-repeat: repeat;
-			}
-			.ill{
-				background-image: url("img/ill.jpg");
-    			background-repeat: repeat;
-			}
 			.top *{
 				position:absolute;
 				z-index:5;
@@ -105,10 +97,6 @@
 				font-weight:300;
 				margin:0 0 20px 0;
 			}
-			div.internet-explorer-worthy{
-				text-align:center;
-				margin:auto;
-			}
 			p.nospaceforpotatoes{
 				margin:10px 0 0 0;
 				color:#fff;
@@ -145,7 +133,7 @@
 		<div class="bottom">
 			<?php
 	 				if($mobile) echo '<div id="disclaimer">To experience Raffles Palette 2015, please view this website on your computer</div>';
-	 				else echo '<h2>Share Your Experience</h1>
+	 				else echo '<h2>Share Your Experience</h2>
 								<div class="share" id="fb">
 									<i class="fa fa-facebook"></i>
 								</div>
@@ -184,7 +172,6 @@
 				jQueryVideo.width(<?php echo $mobile?"vidWidth":"vidWidth*2"; ?>);
 				$(".bottom").css('margin-left',($(window).width()-vidWidth + 10)/2 + 'px');
 				panToLeft();
-				$(".top").height($("#banner").height());
 			});
 
 			$(window).resize(function(){
@@ -203,7 +190,6 @@
 			var disclaimer = document.getElementById("disclaimer");
 			var oDisc = disclaimer.innerHTML;
 			$(document).keydown(function(e) {
-				console.log(e.which);
 				switch(e.which){
 					case 71:
 						$("#disclaimer").text("HI! - Neil & Huey");
@@ -223,17 +209,13 @@
 			<?php
 	 				if(!$mobile) echo "
 						$(document).keydown(function(e) {
-							console.log(e.which);
-							console.log(gainL.gain.value);
 							if(e.which == 67 && gainL.gain.value == 1 && gainR.gain.value == 0) {
-								console.log('keydown');
 								vidJump('right');
 							}
 						});
 
 						$(document).keyup(function(e) {
 							if(e.which == 67 && gainR.gain.value == 1 && gainL.gain.value == 0){
-								console.log('keyup');
 								vidJump('left');
 							}
 						});"
