@@ -12,7 +12,7 @@
 
 	
 ?>
-	<html><head><title>Raffles Palette</title><link rel="icon" href="img/favicon.ico"><link rel="apple-touch-icon-precomposed" href="img/favicon.ico"><link href="css/video-js.min.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'><style>body{max-width: 100%;margin:0;padding:0 0 20px 0;background-color:#006600;overflow-x:hidden;font-family: 'Open Sans', sans-serif;}.top *{position:absolute;z-index:5;}#main{width:100%;position:absolute;margin-top:-200px;}.vjs-control-bar{position:relative;}div.video-js{margin:auto;z-index:5;overflow:hidden;}.vjs-fullscreen-control{display: none;}.vjs-default-skin .vjs-volume-control{margin-right: 20px;}#banner{width:70%;transform: translateX(15%);}#logo{right:0;width:5%;margin:15px 15px 0 0;}.clear{clear:both;}.bottom{position:absolute;width:800px;margin:300px auto 20px auto;z-index:6;}.share{display:inline-block;font-size:1.8em;color:#fff;margin:0 0 0 20px;cursor:pointer;text-align:center;}h2{color:#fff;font-weight:300;margin:0 0 20px 0;}div.internet-explorer-worthy{text-align:center;margin:auto;}p.nospaceforpotatoes{margin:10px 0 0 0;color:#fff;}#palette_video_html5_api{overflow:hidden;}#disclaimer{text-align:center;color: white;width: 100%;}</style></head>
+	<!DOCTYPE HTML><html><head><title>Raffles Palette</title><link rel="icon" href="img/favicon.ico"><link rel="apple-touch-icon-precomposed" href="img/favicon.ico"><link href="css/video-js.min.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'><style>body{max-width: 100%;margin:0;padding:0 0 20px 0;background-color:#006600;overflow-x:hidden;font-family: 'Open Sans', sans-serif;} .top{height:40vw;} .top *{position:absolute;z-index:5;}#main{width:100%;position:absolute;margin-top:-200px;}.vjs-control-bar{position:relative;}div.video-js{margin:auto;z-index:5;overflow:hidden;}.vjs-fullscreen-control{display: none;}.vjs-default-skin .vjs-volume-control{margin-right: 20px;}#banner{width:70%;transform: translateX(15%);}#logo{right:0;width:5%;margin:15px 15px 0 0;}.clear{clear:both;}.bottom{position:absolute;width:800px;margin:300px auto 20px auto;z-index:6;}.share{display:inline-block;font-size:1.8em;color:#fff;margin:0 0 0 20px;cursor:pointer;text-align:center;}h2{color:#fff;font-weight:300;margin:0 0 20px 0;}div.internet-explorer-worthy{text-align:center;margin:auto;}p.nospaceforpotatoes{margin:10px 0 0 0;color:#fff;}#palette_video_html5_api{overflow:hidden;}#disclaimer{text-align:center;color: white;width: 100%;}</style><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-57000907-2', 'auto');   ga('send', 'pageview');  </script></head>
 
 	<body id="body"><div class="top"><img src="img/banner.png" id="banner"><img src="img/logo.png" id="logo"><div class="clear"></div></div><div id="main"><video id="palette_video" poster="img/thumbnail.png" preload="auto"class="video-js vjs-default-skin" controls data-setup="{}" width="800" height="450">
 	 			<?php
@@ -22,7 +22,7 @@
 	</video></div><div class="bottom">
 			<?php
 	 				if($mobile) echo '<div id="disclaimer">To experience Raffles Palette 2015, please view this website on your computer</div>';
-	 				else echo '<h2>Share Your Experience</h1>
+	 				else echo '<h2>Share Your Experience</h2>
 								<div class="share" id="fb">
 									<i class="fa fa-facebook"></i>
 								</div>
@@ -30,42 +30,31 @@
 									<i class="fa fa-twitter"></i>
 								</div>
 								<div id="disclaimer">
-									Use Google Chrome for best results
+									<p><strong>Use Google Chrome for best results</strong></p>
 								</div>';
 	 		?>
 		</div>
 		
 		<script src="js/jquery-2.1.3.min.js"></script><script src="js/AudioContextMonkeyPatch.js"></script><script src="js/video.js"></script><script src="js/browserCheck.js"></script>
-
+		<script src="js/konami.js"></script>
 		<!--If you are reading this, CSC wants you! Email the EXCO at exco@comsci.club-->
-
 		<script>
-			eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('1 a=9;1 c=8;1 3;2.7.b.5="6-i.5";2("d").h(g(){3=e});1 4=$(\'#f\');1 6=4[0];',19,19,'|var|videojs|myPlayer|jQueryVideo|swf|video|options|800|450|vidHeight|flash|vidWidth|palette_video|this|palette_video_html5_api|function|ready|js'.split('|'),0,{}));
+			var _0xf783=["\x73\x77\x66","\x66\x6C\x61\x73\x68","\x6F\x70\x74\x69\x6F\x6E\x73","\x76\x69\x64\x65\x6F\x2D\x6A\x73\x2E\x73\x77\x66","\x72\x65\x61\x64\x79","\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F","\x23\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F\x5F\x68\x74\x6D\x6C\x35\x5F\x61\x70\x69"];var vidHeight=450;var vidWidth=800;var myPlayer;videojs[_0xf783[2]][_0xf783[1]][_0xf783[0]]=_0xf783[3];videojs(_0xf783[5])[_0xf783[4]](function (){myPlayer=this;} );var jQueryVideo=$(_0xf783[6]);var video=jQueryVideo[0];
 
-
+			//var easter_egg = new Konami('http://doge.rafflespalette.com');
 			$(document).ready(function(){
 				jQueryVideo.width(<?php echo $mobile?"vidWidth":"vidWidth*2"; ?>);
-				eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(".5").6(\'4-3\',($(1).7()-d+8)/2+\'c\');b();$(".9").0($("#a").0());',14,14,'height|window||left|margin|bottom|css|width|10|top|banner|panToLeft|px|vidWidth'.split('|'),0,{}));
+				var _0x7350=["\x6D\x61\x72\x67\x69\x6E\x2D\x6C\x65\x66\x74","\x77\x69\x64\x74\x68","\x70\x78","\x63\x73\x73","\x2E\x62\x6F\x74\x74\x6F\x6D"];$(_0x7350[4])[_0x7350[3]](_0x7350[0],($(window)[_0x7350[1]]()-vidWidth+10)/2+_0x7350[2]);panToLeft();				
 			});
 
-			eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(p).o(4(){n.r()});4 s(a){i(a==\'5\'){7.9(\'d-5\',\'0\');t()}l{7.9(\'d-5\',\'-\'+m+\'q\');A()}}6 1=3.g("1");6 k=1.h;$(3).C(4(e){D.E(e.2);G(e.2){b f:$("#1").c("F! - u & B");8;b j:$("#1").c("w v.x!");8}});$(3).y(4(e){i(e.2==f||e.2==j||e.2==z){6 1=3.g("1");1.h=k}});',43,43,'|disclaimer|which|document|function|left|var|jQueryVideo|break|css|direction|case|text|margin||71|getElementById|innerHTML|if|77|oDisc|else|vidWidth|location|resize|window|px|reload|vidJump|panToLeft|Neil|comsci|Join|club|keyup|76|panToRight|Huey|keydown|console|log|HI|switch'.split('|'),0,{}));
+			var _0x87f8=["\x72\x65\x6C\x6F\x61\x64","\x72\x65\x73\x69\x7A\x65","\x6C\x65\x66\x74","\x6D\x61\x72\x67\x69\x6E\x2D\x6C\x65\x66\x74","\x30","\x63\x73\x73","\x2D","\x70\x78","\x64\x69\x73\x63\x6C\x61\x69\x6D\x65\x72","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x77\x68\x69\x63\x68","\x6C\x6F\x67","\x48\x49\x21\x20\x2D\x20\x4E\x65\x69\x6C\x20\x26\x20\x48\x75\x65\x79","\x74\x65\x78\x74","\x23\x64\x69\x73\x63\x6C\x61\x69\x6D\x65\x72","\x4A\x6F\x69\x6E\x20\x63\x6F\x6D\x73\x63\x69\x2E\x63\x6C\x75\x62\x21","\x6B\x65\x79\x64\x6F\x77\x6E","\x6B\x65\x79\x75\x70"];$(window)[_0x87f8[1]](function (){location[_0x87f8[0]]();} );function vidJump(_0x6701x2){if(_0x6701x2==_0x87f8[2]){jQueryVideo[_0x87f8[5]](_0x87f8[3],_0x87f8[4]);panToLeft();} else {jQueryVideo[_0x87f8[5]](_0x87f8[3],_0x87f8[6]+vidWidth+_0x87f8[7]);panToRight();} ;} ;var disclaimer=document[_0x87f8[9]](_0x87f8[8]);var oDisc=disclaimer[_0x87f8[10]];$(document)[_0x87f8[17]](function (_0x6701x5){console[_0x87f8[12]](_0x6701x5[_0x87f8[11]]);switch(_0x6701x5[_0x87f8[11]]){case 71:$(_0x87f8[15])[_0x87f8[14]](_0x87f8[13]);break ;;case 77:$(_0x87f8[15])[_0x87f8[14]](_0x87f8[16]);break ;;} ;} );$(document)[_0x87f8[18]](function (_0x6701x5){if(_0x6701x5[_0x87f8[11]]==71||_0x6701x5[_0x87f8[11]]==77||_0x6701x5[_0x87f8[11]]==76){var disclaimer=document[_0x87f8[9]](_0x87f8[8]);disclaimer[_0x87f8[10]]=oDisc;} ;} );
 			<?php
-	 				if(!$mobile) echo "
-						eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\\b'+e(c)+'\\\b','g'),k[c])}}return p}('$(f).8(a(e){4.5(e.6);4.5(7.3.2);9(e.6==b&&7.3.2==1&&c.3.2==0){4.5(\'8\');d(\'h\')}});$(f).g(a(e){9(e.6==b&&c.3.2==1&&7.3.2==0){4.5(\'g\');d(\'i\')}});',19,19,'||value|gain|console|log|which|gainL|keydown|if|function|67|gainR|vidJump||document|keyup|right|left'.split('|'),0,{}));"
+	 				if(!$mobile) echo '
+						var _0x47de=["\x77\x68\x69\x63\x68","\x76\x61\x6C\x75\x65","\x67\x61\x69\x6E","\x72\x69\x67\x68\x74","\x6B\x65\x79\x64\x6F\x77\x6E","\x6C\x65\x66\x74","\x6B\x65\x79\x75\x70"];$(document)[_0x47de[4]](function (_0x3884x1){if(_0x3884x1[_0x47de[0]]==67&&gainL[_0x47de[2]][_0x47de[1]]==1&&gainR[_0x47de[2]][_0x47de[1]]==0){vidJump(_0x47de[3]);} ;} );$(document)[_0x47de[6]](function (_0x3884x1){if(_0x3884x1[_0x47de[0]]==67&&gainR[_0x47de[2]][_0x47de[1]]==1&&gainL[_0x47de[2]][_0x47de[1]]==0){vidJump(_0x47de[5]);} ;} );';
 			?>
 
-			eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$("#j").7(2(){1.6.5="d://9.b.3/a/a.l?u=4://8.3"});$("#c").7(2(){1.6.5="4://c.3/h?e=f g n q&s=4://8.3&v=8"});$("#t").7(2(){1.6.5="d://9.b.3/8"});$("#m").7(2(){1.6.5="4://9.p.o.i"});$(1).k(2(){$(1).r(0)});',32,32,'|window|function|com|http|href|location|click|rafflespalette|www|sharer|facebook|twitter|https|text|Experience|the|share|sg|fb|scroll|php|logo|Raffles|edu|ri|Palette|scrollLeft|url|banner||hashtags'.split('|'),0,{}));
+			var _0x39aa=["\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x66\x61\x63\x65\x62\x6F\x6F\x6B\x2E\x63\x6F\x6D\x2F\x73\x68\x61\x72\x65\x72\x2F\x73\x68\x61\x72\x65\x72\x2E\x70\x68\x70\x3F\x75\x3D\x68\x74\x74\x70\x3A\x2F\x2F\x72\x61\x66\x66\x6C\x65\x73\x70\x61\x6C\x65\x74\x74\x65\x2E\x63\x6F\x6D","\x63\x6C\x69\x63\x6B","\x23\x66\x62","\x68\x74\x74\x70\x3A\x2F\x2F\x74\x77\x69\x74\x74\x65\x72\x2E\x63\x6F\x6D\x2F\x73\x68\x61\x72\x65\x3F\x74\x65\x78\x74\x3D\x45\x78\x70\x65\x72\x69\x65\x6E\x63\x65\x20\x74\x68\x65\x20\x52\x61\x66\x66\x6C\x65\x73\x20\x50\x61\x6C\x65\x74\x74\x65\x26\x75\x72\x6C\x3D\x68\x74\x74\x70\x3A\x2F\x2F\x72\x61\x66\x66\x6C\x65\x73\x70\x61\x6C\x65\x74\x74\x65\x2E\x63\x6F\x6D\x26\x68\x61\x73\x68\x74\x61\x67\x73\x3D\x72\x61\x66\x66\x6C\x65\x73\x70\x61\x6C\x65\x74\x74\x65","\x23\x74\x77\x69\x74\x74\x65\x72","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x66\x61\x63\x65\x62\x6F\x6F\x6B\x2E\x63\x6F\x6D\x2F\x72\x61\x66\x66\x6C\x65\x73\x70\x61\x6C\x65\x74\x74\x65","\x23\x62\x61\x6E\x6E\x65\x72","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x72\x69\x2E\x65\x64\x75\x2E\x73\x67","\x23\x6C\x6F\x67\x6F","\x73\x63\x72\x6F\x6C\x6C\x4C\x65\x66\x74","\x73\x63\x72\x6F\x6C\x6C"];$(_0x39aa[4])[_0x39aa[3]](function (){window[_0x39aa[1]][_0x39aa[0]]=_0x39aa[2];} );$(_0x39aa[6])[_0x39aa[3]](function (){window[_0x39aa[1]][_0x39aa[0]]=_0x39aa[5];} );$(_0x39aa[8])[_0x39aa[3]](function (){window[_0x39aa[1]][_0x39aa[0]]=_0x39aa[7];} );$(_0x39aa[10])[_0x39aa[3]](function (){window[_0x39aa[1]][_0x39aa[0]]=_0x39aa[9];} );$(window)[_0x39aa[12]](function (){$(window)[_0x39aa[11]](0);} );
 		</script>
 		<script src="js/audioPanner.js"></script>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-57000907-2', 'auto');
-		  ga('send', 'pageview');
-
-		</script>
 	</body>
 </html>
