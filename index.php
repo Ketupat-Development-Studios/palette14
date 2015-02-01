@@ -1,7 +1,4 @@
 <?php
-$useragent = $_SERVER['HTTP_USER_AGENT'];
-$safari = false;
-$mobile = false;
 	$safariorchrome = strpos($useragent, 'Safari') ? true : false;     // Browser is either Safari or Chrome (since Chrome User-Agent includes the word 'Safari')
 	$chrome = strpos($useragent, 'Chrome') ? true : false;             // Browser is Chrome
 	if($safariorchrome == true AND $chrome == false){ $safari = true; }     // Browser should be Safari, because there is no 'Chrome' in the User-Agent
@@ -9,8 +6,8 @@ $mobile = false;
 	if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i',$useragent)||preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i',substr($useragent,0,4))){
 		$mobile = true;
 	}
-	
-	?>
+
+?>
 	<!--
 		Code contained herein is the intellectual property of Neil Dhar and Lee Jin Huey. Reproduction or adaptation through any means is prohibited. Such actions will be subject to extensive lawsuits.
 	-->
@@ -76,6 +73,39 @@ $mobile = false;
 		var _0xf783=["\x73\x77\x66","\x66\x6C\x61\x73\x68","\x6F\x70\x74\x69\x6F\x6E\x73","\x76\x69\x64\x65\x6F\x2D\x6A\x73\x2E\x73\x77\x66","\x72\x65\x61\x64\x79","\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F","\x23\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F\x5F\x68\x74\x6D\x6C\x35\x5F\x61\x70\x69"];var vidHeight=450;var vidWidth=800;var myPlayer;videojs[_0xf783[2]][_0xf783[1]][_0xf783[0]]=_0xf783[3];videojs(_0xf783[5])[_0xf783[4]](function (){myPlayer=this;} );var jQueryVideo=$(_0xf783[6]);var video=jQueryVideo[0];
 			
 //			var _0xa95a=["\x68\x74\x74\x70\x3A\x2F\x2F\x72\x61\x66\x66\x6C\x65\x73\x70\x61\x6C\x65\x74\x74\x65\x2E\x63\x6F\x6D","\x73\x65\x61\x72\x63\x68","\x55\x52\x4C","\x43\x6F\x64\x65\x20\x63\x6F\x6E\x74\x61\x69\x6E\x65\x64\x20\x68\x65\x72\x65\x69\x6E\x20\x69\x73\x20\x74\x68\x65\x20\x69\x6E\x74\x65\x6C\x6C\x65\x63\x74\x75\x61\x6C\x20\x70\x72\x6F\x70\x65\x72\x74\x79\x20\x6F\x66\x20\x4E\x65\x69\x6C\x20\x44\x68\x61\x72\x20\x61\x6E\x64\x20\x4C\x65\x65\x20\x4A\x69\x6E\x20\x48\x75\x65\x79\x2E\x20\x52\x65\x70\x72\x6F\x64\x75\x63\x74\x69\x6F\x6E\x20\x6F\x72\x20\x61\x64\x61\x70\x74\x61\x74\x69\x6F\x6E\x20\x74\x68\x72\x6F\x75\x67\x68\x20\x61\x6E\x79\x20\x6D\x65\x61\x6E\x73\x20\x69\x73\x20\x70\x72\x6F\x68\x69\x62\x69\x74\x65\x64\x2E\x20\x53\x75\x63\x68\x20\x61\x63\x74\x69\x6F\x6E\x73\x20\x77\x69\x6C\x6C\x20\x62\x65\x20\x73\x75\x62\x6A\x65\x63\x74\x20\x74\x6F\x20\x65\x78\x74\x65\x6E\x73\x69\x76\x65\x20\x6C\x61\x77\x73\x75\x69\x74\x73\x2E"];if(document[_0xa95a[2]][_0xa95a[1]](_0xa95a[0])==-1){while(1==1){alert(_0xa95a[3]);} ;} ;
+=======
+
+	
+?>
+	<!DOCTYPE HTML><html><head><title>Raffles Palette</title><link rel="icon" href="img/favicon.ico"><link rel="apple-touch-icon-precomposed" href="img/favicon.ico"><link href="css/video-js.min.css" rel="stylesheet"><link href="css/font-awesome.min.css" rel="stylesheet"><link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'><style>body{max-width: 100%;margin:0;padding:0 0 20px 0;background-color:#006600;overflow-x:hidden;font-family: 'Open Sans', sans-serif;} .top{height:40vw;} .top *{position:absolute;z-index:5;}#main{width:100%;position:absolute;margin-top:-200px;}.vjs-control-bar{position:relative;}div.video-js{margin:auto;z-index:5;overflow:hidden;}.vjs-fullscreen-control{display: none;}.vjs-default-skin .vjs-volume-control{margin-right: 20px;}#banner{width:70%;transform: translateX(15%);}#logo{right:0;width:5%;margin:15px 15px 0 0;}.clear{clear:both;}.bottom{position:absolute;width:800px;margin:300px auto 20px auto;z-index:6;}.share{display:inline-block;font-size:1.8em;color:#fff;margin:0 0 0 20px;cursor:pointer;text-align:center;}h2{color:#fff;font-weight:300;margin:0 0 20px 0;}div.internet-explorer-worthy{text-align:center;margin:auto;}p.nospaceforpotatoes{margin:10px 0 0 0;color:#fff;}#palette_video_html5_api{overflow:hidden;}#disclaimer{text-align:center;color: white;width: 100%;}</style><script>   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');    ga('create', 'UA-57000907-2', 'auto');   ga('send', 'pageview');  </script></head>
+
+	<body id="body"><div class="top"><img src="img/banner.png" id="banner"><img src="img/logo.png" id="logo"><div class="clear"></div></div><div id="main"><video id="palette_video" poster="img/thumbnail.png" preload="auto"class="video-js vjs-default-skin" controls data-setup="{}" width="800" height="450">
+	 			<?php
+	 				if($mobile) echo '<source src="vid/teaser.mp4" type="video/mp4">';
+	 				else echo '<source src="vid/openhouse.webm" type="video/webm"><source src="vid/openhouse.mp4" type="video/mp4">';
+	 			?>
+	</video></div><div class="bottom">
+			<?php
+	 				if($mobile) echo '<div id="disclaimer">To experience Raffles Palette 2015, please view this website on your computer</div>';
+	 				else echo '<h2>Share Your Experience</h2>
+								<div class="share" id="fb">
+									<i class="fa fa-facebook"></i>
+								</div>
+								<div class="share" id="twitter">
+									<i class="fa fa-twitter"></i>
+								</div>
+								<div id="disclaimer">
+									<p><strong>Use Google Chrome for best results</strong></p>
+								</div>';
+	 		?>
+		</div>
+		
+		<script src="js/jquery-2.1.3.min.js"></script><script src="js/AudioContextMonkeyPatch.js"></script><script src="js/video.js"></script><script src="js/browserCheck.js"></script>
+		<script src="js/konami.js"></script>
+		<!--If you are reading this, CSC wants you! Email the EXCO at exco@comsci.club-->
+		<script>
+			var _0xf783=["\x73\x77\x66","\x66\x6C\x61\x73\x68","\x6F\x70\x74\x69\x6F\x6E\x73","\x76\x69\x64\x65\x6F\x2D\x6A\x73\x2E\x73\x77\x66","\x72\x65\x61\x64\x79","\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F","\x23\x70\x61\x6C\x65\x74\x74\x65\x5F\x76\x69\x64\x65\x6F\x5F\x68\x74\x6D\x6C\x35\x5F\x61\x70\x69"];var vidHeight=450;var vidWidth=800;var myPlayer;videojs[_0xf783[2]][_0xf783[1]][_0xf783[0]]=_0xf783[3];videojs(_0xf783[5])[_0xf783[4]](function (){myPlayer=this;} );var jQueryVideo=$(_0xf783[6]);var video=jQueryVideo[0];
+>>>>>>> 6940b6b0124e101e91ea376bf1a605ec87b0df93
 
 			//var easter_egg = new Konami('http://doge.rafflespalette.com');
 			$(document).ready(function(){
@@ -93,4 +123,4 @@ $mobile = false;
 		</script>
 		<script src="js/audioPanner.js"></script>
 	</body>
-	</html>
+</html>
