@@ -1,2 +1,3 @@
-#RJ Open House 2014
-##*Palette*
+# RJ Open House 2014
+
+## *Palette*
